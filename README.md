@@ -1,16 +1,66 @@
-# React + Vite
+# Aplicación de Personajes con React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación web está desarrollada con React y Vite, diseñada para mostrar y gestionar una colección de personajes de manera interactiva. El proyecto incluye dos implementaciones diferentes:
 
-Currently, two official plugins are available:
+- `_App.jsx`: Implementación con datos locales de Rick and Morty almacenados en `/data/personajes.json`
+- `App.jsx`: Versión que consume la API de Dragon Ball y almacena los datos en localStorage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## React Compiler
+- 🎴 Visualización de tarjetas de personajes
+- 💾 Almacenamiento local de datos
+- 🎨 Interfaz moderna y responsive
+- ⚡ Desarrollo rápido con Vite
+- 🔄 Actualizaciones en tiempo real (HMR)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Estructura del Proyecto
 
-## Expanding the ESLint configuration
+```
+src/
+  ├── componentes/    # Componentes React reutilizables
+  │   └── Tarjeta.jsx # Componente de tarjeta de personaje
+  ├── data/          # Datos y configuraciones
+  │   ├── personajes.js
+  │   └── personajes.json
+  ├── utils/         # Utilidades y funciones auxiliares
+  │   ├── almacenamiento.js
+  │   └── llamadas.js
+  └── assets/        # Recursos estáticos
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Instalación
+
+1. Clona este repositorio
+2. Instala las dependencias:
+```bash
+npm install
+```
+
+## Scripts Disponibles
+
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm run lint` - Ejecuta el linter para verificar el código
+
+## Tecnologías Principales
+
+- React 
+- Vite
+- ESLint para calidad de código
+- CSS Moderno
+
+## APIs y Almacenamiento
+
+- Rick and Morty - Datos almacenados localmente en `personajes.json`
+- [Dragon Ball API](https://dragon-ball-api.com/) - Consultada en tiempo real desde `App.jsx` y datos guardados en localStorage
+
+## Contribución
+
+Las contribuciones son bienvenidas. Por favor, asegúrate de actualizar las pruebas según corresponda.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT.
+
+---
+Desarrollado con ❤️ usando React + Vite
