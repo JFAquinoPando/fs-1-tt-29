@@ -1,0 +1,76 @@
+#root {
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  color: whitesmoke;
+  border-radius: 16px;
+  background-color: crimson;
+}
+
+.status-vivo{
+  background-color: green;
+  display: block;
+  padding: 16px;
+}
+
+.status-muerto{
+  background-color: black;
+  display: block;
+  padding: 16px;
+}
+
+form{
+  display: flex;
+  background-color: darkblue;
+  color: whitesmoke;
+  padding: 36px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.personaje-encontrado{
+  border: 1px solid white;
+  padding: 8px;
+  box-shadow: 2px 2px 2px black;
+  img{
+    width: 120px;
+  }
+}
