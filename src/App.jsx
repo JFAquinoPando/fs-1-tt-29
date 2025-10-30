@@ -3,6 +3,7 @@ import './App.css'
 import { guardar, obtener, limpiar } from "./utils/almacenamiento";
 import { obtenerDatos } from "./utils/llamadas"
 import Swal from 'sweetalert2'
+import { Tarjeta } from './componentes/Tarjeta';
 
 
 export function App() {
@@ -52,13 +53,4 @@ export function App() {
             {character.id > 0  && <Tarjeta datos={character} />}
         </section>
     </>
-}
-
-
-export const Tarjeta = ({ datos }) => {
-    const { name: nombre, image: imagen } = datos
-    return <article className='personaje-encontrado'>
-        <h3>{nombre}</h3>
-        <img src={imagen} alt={nombre} />
-    </article>
 }
